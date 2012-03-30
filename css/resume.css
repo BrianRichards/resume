@@ -10,9 +10,251 @@ body:after {
 body:after {
   clear: both;
 }
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman
+
+    More info at: http://lesselements.com
+-----------------------------------------------------*/
+body {
+  font-family: 'Merriweather', serif;
+  font-size: .95em;
+  line-height: 1.6;
+  background-image: url("../images/bg.jpg");
+  color: #555;
+  text-shadow: 1px 1px 1px #FFF;
+}
+header {
+  *zoom: 1;
+}
+header:before,
+header:after {
+  content: "";
+  display: table;
+}
+header:after {
+  clear: both;
+}
+a {
+  color: #841618;
+}
+#page {
+  *zoom: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  background-color: #FFF;
+  background-image: url("../images/content-bg.jpg");
+  -webkit-box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8);
+}
+#page:before,
+#page:after {
+  content: "";
+  display: table;
+}
+#page:after {
+  clear: both;
+}
+ul {
+  padding-left: 20px;
+}
+ul li {
+  list-style-type: square;
+  margin-bottom: 7px;
+}
+dl dt {
+  font-weight: bold;
+  color: #777;
+  margin-bottom: 2px;
+}
+dl dd {
+  margin-left: 15px;
+  margin-bottom: 7px;
+}
+h2 {
+  font-family: 'Gudea', sans-serif;
+  color: #847374;
+  text-shadow: 0px -1px 0px #ffffff, 0px 2px 0px #ffffff;
+  margin: 0 25px;
+  border-bottom: 1px dotted #AAA;
+}
+h3 {
+  font-family: 'Gudea', sans-serif;
+  color: #999;
+  text-shadow: 0px -1px 0px #ffffff, 0px 2px 0px #ffffff;
+  margin-bottom: 3px;
+}
+#contact,
+#skills,
+#jobs,
+#education {
+  display: inline;
+  float: left;
+  width: 97.91666666666666%;
+  margin: 0 1.0416666666666665%;
+}
+#contact {
+  margin-bottom: 20px;
+}
+.experience,
+.skills,
+.education {
+  padding: 0 25px;
+}
+#contactInfo {
+  *zoom: 1;
+}
+#contactInfo h1 {
+  margin-bottom: 0;
+}
+#contactInfo h1 img {
+  width: 200px;
+  margin-left: 10px;
+}
+#contactInfo h1 span {
+  position: absolute;
+  left: -999px;
+}
+#contactInfo .vcard {
+  font-size: .9em;
+  padding-left: 15px;
+  padding-right: 20px;
+}
+#contactInfo .vcard .fn {
+  display: none;
+}
+#contactInfo .vcard .adr {
+  display: none;
+  margin-bottom: 5px;
+}
+#contactInfo .vcard a {
+  display: inline-block;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -999px;
+  width: 36px;
+  height: 36px;
+  background-repeat: no-repeat;
+  background-image: url("../images/contact-logos.png");
+}
+#contactInfo .vcard .email {
+  background-position: 0px 0px;
+}
+#contactInfo .vcard .blog {
+  background-position: -36px 0px;
+}
+#contactInfo .vcard .twitter {
+  background-position: -72px 0px;
+}
+#contactInfo .vcard .linkedin {
+  background-position: -108px 0px;
+}
+#contactInfo:before,
+#contactInfo:after {
+  content: "";
+  display: table;
+}
+#contactInfo:after {
+  clear: both;
+}
+.experience,
+.education {
+  margin-bottom: 30px;
+}
+.experience .adr,
+.education .adr {
+  font-style: italic;
+  font-size: .8em;
+}
+.experience .dates,
+.education .dates {
+  font-style: italic;
+  font-size: .8em;
+}
+.experience .title,
+.education .title {
+  display: block;
+  font-weight: bold;
+  font-size: .9em;
+  color: #777;
+}
 @media only screen and (min-width: 520px) {
-  
+  #contact {
+    margin-top: 20px;
+  }
+  #contactInfo h1 {
+    display: inline;
+    float: left;
+    width: 47.91666666666667%;
+    margin: 0 1.0416666666666665%;
+  }
+  #contactInfo h1 img {
+    width: 300px;
+    margin-left: 0;
+  }
+  #contactInfo .vcard {
+    display: inline;
+    float: left;
+    width: 31.25%;
+    margin: 0 1.0416666666666665%;
+    float: right;
+    margin-top: 10px;
+    text-align: right;
+  }
+  #contactInfo .vcard .fn {
+    display: block;
+  }
+  #contactInfo .vcard .adr {
+    display: block;
+  }
+  .experience .adr,
+  .education .adr {
+    display: inline-block;
+  }
+  .experience .dates,
+  .education .dates {
+    display: inline-block;
+    float: right;
+  }
+  .experience .title,
+  .education .title {
+    display: block;
+  }
+  .education .summary {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 }
 @media only screen and (min-width: 960px) {
-  
+  #skills {
+    display: inline;
+    float: left;
+    width: 39.58333333333333%;
+    margin: 0 1.0416666666666665%;
+    float: right;
+  }
+  #jobs,
+  #education {
+    display: inline;
+    float: left;
+    width: 56.25%;
+    margin: 0 1.0416666666666665%;
+  }
+  #page {
+    margin: 40px auto;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+  }
 }

@@ -4,19 +4,37 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Brian S. Richards - Resume</title>
+  <title>Brian Richards - Resume</title>
 
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
 
-  <!-- favicon.ico -->
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Gudea' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/resume.css">
 
-  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-24062154-5']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 </head>
 <body>
-  <header>
+  <div id="page">
+  <header id="contact">
     <div id="contactInfo">
-      <h1>Brian S. Richards - Resume</h1>
+      <h1>
+        <img src="images/logo.png" alt="Brian Richards" />
+        <span>Brian Richards - Resume</span>
+      </h1>
       <div id="hcard-Brian-Richards" class="vcard">
         <span class="url fn">Brian Richards</span>
         <div class="adr">
@@ -26,9 +44,10 @@
           <span class="region">NJ</span>
           <span class="postal-code">07726</span>
         </div>
-        <a class="email" rel="me" href="mailto:brian@brianrichards.net">brian@brianrichards.net</a>
-        <a class="url" rel="me" href="http://blog.brianrichards.net/">http://blog.brianrichards.net</a>
-        <a class="url" rel="me" href="http://twitter.com/BrianRichards">@BrianRichards</a>
+        <a class="email" rel="me" href="mailto:brian@brianrichards.net" title="Email">Email</a>
+        <a class="url blog" rel="me" href="http://blog.brianrichards.net/posts/" title="Blog" target="_blank">Blog</a>
+        <a class="url twitter" rel="me" href="http://twitter.com/BrianRichards" title="Twitter" target="_blank">Twitter</a>
+        <a class="url linkedin" rel="me" href="http://www.linkedin.com/in/briansrichards" title="LinkedIn" target="_blank">LinkedIn</a>
       </div>
     </div>
   </header>
@@ -41,7 +60,9 @@
         <h3>Overview</h3>
       </header>
       <ul>
-        <li>Client-side web development using HTML, CSS, JavaScript/jQuery, responsive design, progressive enhancement, dynamic stylesheets (LESS/Sass), client MVC frameworks, and grid systems.</li>
+        <li>
+          Client-side web development using HTML, CSS, JavaScript/jQuery, responsive design, progressive enhancement, dynamic stylesheets (LESS/Sass), client MVC frameworks, and grid systems.
+        </li>
         <li>Server-side web development using ASP.NET, ASP.NET MVC, Java, and SQL.</li>
         <li>User interface and interaction design with storyboards, wireframes, and mockups.</li>
         <li>User research for personas and scenarios.</li>
@@ -52,7 +73,7 @@
       </ul>
     </section>
 
-    <section class="skills details">
+    <!--section class="skills details">
       <header>
         <h3>Details</h3>
       </header>
@@ -76,7 +97,7 @@
         <dt></dt>
         <dd></dd>
       </dl>
-    </section>    
+    </section-->    
   </div>
 
   <div id="jobs">
@@ -89,7 +110,7 @@
         <div class="adr">
           <span class="locality">Cranbury</span>, <span class="region">NJ</span>
         </div>
-        <div class="">
+        <div class="dates">
           <time class="dtstart" datetime="2010-05-01">May 2010</time> - <time class="dtend" datetime="2012-03-31">Present</time>
         </div>
         <span class="title">Senior Developer Interaction Designer</span>
@@ -105,7 +126,7 @@
         <div class="adr">
           <span class="locality">Charleston</span>, <span class="region">SC</span>
         </div>
-        <div class="">
+        <div class="dates">
           <time class="dtstart" datetime="2008-01-01">January 2008</time> - <time class="dtend" datetime="2010-05-01">May 2010</time>
         </div>
         <span class="title">Senior Interaction Designer</span>
@@ -121,7 +142,7 @@
         <div class="adr">
           <span class="locality">Tampa</span>, <span class="region">FL</span>
         </div>
-        <div class="">
+        <div class="dates">
           <time class="dtstart" datetime="2005-05-01">May 2005</time> - <time class="dtend" datetime="2007-12-31">December 2007</time>
         </div>
         <span class="title">User Interface Designer</span>
@@ -137,7 +158,7 @@
         <div class="adr">
           <span class="locality">Tampa</span>, <span class="region">FL</span>
         </div>
-        <div class="">
+        <div class="dates">
           <time class="dtstart" datetime="2000-11-01">November 2000</time> - <time class="dtend" datetime="2005-05-01">May 2005</time>
         </div>
         <span class="title">Senior Web Designer/Developer</span>
@@ -175,17 +196,13 @@
         <div class="adr">
           <span class="locality">Tampa</span>, <span class="region">FL</span>
         </div>
-        <div class="">
+        <div class="dates">
           <time class="dtstart" datetime="1999-12-01">December 1999</time> - <time class="dtend" datetime="2000-11-30">November 2000</time>
         </div>
         <span class="title">Engineering/Marketing Multimedia Developer</span>
       </header>
       <p class="summary">
-        <ul>
-          <li>Created an ASP based intranet application for the numbering and inventory of printed collateral material.</li>
-          <li>Designed and developed the multimedia components used for product launch and training.</li>
-          <li>Responsible for creating animations and illustrations to aid in the explanation of technologies used to develop the applications.</li>
-        </ul>
+        Created an ASP based intranet application for the numbering and inventory of printed collateral material. Designed and developed the multimedia components used for product launch and training. Responsible for creating animations and illustrations to aid in the explanation of technologies used to develop the applications.
       </p>
     </section>
 
@@ -195,7 +212,7 @@
         <div class="adr">
           <span class="locality">Ft. Lauderdale</span>, <span class="region">FL</span>
         </div>
-        <div class="">
+        <div class="dates">
           <time class="dtstart" datetime="1998-09-01">September 1998</time> - <time class="dtend" datetime="1999-12-31">December 1999</time>
         </div>
         <span class="title">Instructor (Part-time)</span>
@@ -211,7 +228,7 @@
         <div class="adr">
           <span class="locality">Ft. Lauderdale</span>, <span class="region">FL</span>
         </div>
-        <div class="">
+        <div class="dates">
           <time class="dtstart" datetime="1997-06-01">June 1997</time> - <time class="dtend" datetime="1999-12-31">December 1999</time>
         </div>
         <span class="title">Multimedia/Web Developer</span>
@@ -247,10 +264,10 @@
         <div class="adr">
           <span class="locality">Savannah</span>, <span class="region">GA</span>
         </div>
-        <div class="">
+        <div class="dates">
           <time class="dtstart" datetime="1994-08-01">August 1994</time> - <time class="dtend" datetime="1997-05-31">May 1997</time>
         </div>
-        <p class="summary degree">Bachelor of Fine Arts in Computer Art</p>
+        <p class="summary degree">Degree: Bachelor of Fine Arts in Computer Art</p>
         <p class="summary">Graduated cum laude</p>
     </section>
 
@@ -259,7 +276,7 @@
         <div class="adr">
           <span class="locality">Louisville</span>, <span class="region">KY</span>
         </div>
-        <div class="">
+        <div class="dates">
           <time class="dtstart" datetime="1992-08-01">August 1992</time> - <time class="dtend" datetime="1994-05-31">May 1994</time>
         </div>
         <p class="summary major">Major: Engineering Mathematics and Computer Science</p>
@@ -270,7 +287,7 @@
         <div class="adr">
           <span class="locality">Evansville</span>, <span class="region">IN</span>
         </div>
-        <div class="">
+        <div class="dates">
           <time class="dtstart" datetime="1991-08-01">August 1991</time> - <time class="dtend" datetime="1992-05-31">May 1992</time>
         </div>
         <p class="summary major">Major: Computer Engineering</p>
@@ -279,6 +296,16 @@
   <footer>
 
   </footer>
+  </div>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bsrFloatingHeader.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $("#contact").bsrFloatingHeader();
+    });
+  </script>
+
 </body>
 </html>
 

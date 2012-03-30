@@ -1,18 +1,232 @@
- @import 'grid.less';
+@import 'grid.less';
+@import 'elements.less';
+
+//Grid variables
+@column-width: 60;
+@gutter-width: 20;
+@columns: 12;
+@total-width: 100%;
+
+
+body{
+	font-family: 'Merriweather', serif;
+	font-size: .95em;
+	line-height: 1.6;
+	background-image: url("../images/bg.jpg");
+	color: #555;
+	text-shadow: 1px 1px 1px #FFF;
+}
+
+header{
+	.clearfix;
+}
+
+a{
+	color: #841618;
+}
+
+#page{
+	.clearfix;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding-bottom: 30px;
+	background-color: #FFF;
+	background-image: url("../images/content-bg.jpg");
+	.drop-shadow(3px, 3px, 15px, .8);
+}
+
+ul{
+	padding-left: 20px;
+
+	li{
+		list-style-type: square;
+		margin-bottom: 7px;
+	}
+}
+
+dl{
+	dt{
+		font-weight:bold;
+		color: #777;
+		margin-bottom: 2px;
+	}
+	dd{
+		margin-left: 15px;
+		margin-bottom: 7px;
+	}
+}
+
+h2{
+	font-family: 'Gudea', sans-serif;
+	color: #847374;
+	text-shadow: 0px -1px 0px #FFF, 0px 2px 0px #FFF;
+	//padding-bottom: 2px;
+	margin: 0 25px;
+	border-bottom: 1px dotted #AAA;
+}
+
+h3{
+	font-family: 'Gudea', sans-serif;
+	color: #999;
+	text-shadow: 0px -1px 0px #FFF, 0px 2px 0px #FFF;
+	margin-bottom: 3px;
+}
+
+
+#contact, #skills, #jobs, #education{
+	.column(12);
+}
+
+#contact{
+	margin-bottom: 20px;
+}
+
+.experience, .skills, .education{
+	padding: 0 25px;
+}
+
+#contactInfo{
+	h1{
+		img{
+			width: 200px;
+			margin-left: 10px;
+		}
+		span{
+			position: absolute;
+			left: -999px;
+		}
+		margin-bottom: 0;
+	}
+	.vcard{
+		font-size: .9em;
+		padding-left: 15px;
+		padding-right: 20px;
+		.fn{
+			display: none;
+		}
+		.adr{
+			display: none;
+			margin-bottom: 5px;
+		}
+
+		//sprite
+		a{
+			display: inline-block;
+			overflow: hidden;
+			text-align: left;
+			text-indent: -999px;
+			width: 36px;
+			height: 36px;
+			background-repeat: no-repeat;
+			background-image: url("../images/contact-logos.png");
+		}
+		.email{
+			background-position: -0px -0px;
+		}
+		.blog{
+			background-position: -36px -0px;
+		}
+		.twitter{
+			background-position: -72px -0px;
+		}
+		.linkedin{
+			background-position: -108px -0px;
+		}
+
+	}
+	.clearfix;
+}
+
+.experience, .education{
+	.adr{
+		font-style: italic;
+		font-size: .8em;
+	}
+	.dates{
+		font-style: italic;
+		font-size: .8em;
+	}
+	.title{
+		display: block;
+		font-weight: bold;
+		font-size: .9em;
+		color: #777;
+	}
+	margin-bottom: 30px;
+}
 
 
 
 
+@media only screen and (min-width: 520px) { 
+
+#contact{
+	margin-top: 20px;
+}
+
+#contactInfo{
+	h1{
+		img{
+			width: 300px;
+			margin-left: 0;
+		}
+		.column(6);
+	}
+	.vcard{
+		.column(4);
+		float: right;
+		margin-top: 10px;
+		text-align: right;
+
+		.fn{
+			display: block;
+		}
+		.adr{
+			display: block;
+		}
+	}
+}
+
+.experience, .education{
+	.adr{
+		display: inline-block;
+	}
+	.dates{
+		display: inline-block;
+		float: right;
+	}
+	.title{
+		display: block;
+	}
+}
+
+.education{
+	.summary{
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+}
 
 
- @media only screen and (min-width: 520px) { 
+}
+
+@media only screen and (min-width: 960px) { 
+
+#skills{
+	.column(5);
+	float: right;
+}
+
+#jobs, #education{
+	.column(7);
+
+}
+
+#page{
+	margin: 40px auto;
+	.rounded(15px);
+}
 
 
 
- }
-
- @media only screen and (min-width: 960px) { 
-
-
-
- }
+}
